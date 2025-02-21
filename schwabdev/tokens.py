@@ -134,6 +134,9 @@ class Tokens:
                             "refresh_token_issued": rt_issued.isoformat(),
                             "token_dictionary": token_dictionary}
                 json.dump(to_write, f, ensure_ascii=False, indent=4)
+            print(">>>>>>>>>> Refresh Token:")
+            print(self.refresh_token)
+            print(">>>>>>>>>>>>>>>>>>>>>>>>")
         except Exception as e:
             self._client.logger.error(e)
             self._client.logger.error("Could not write tokens file")
